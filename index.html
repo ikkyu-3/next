@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <link href="main.css" rel="stylesheet">
-        <title>next用サンプル</title>
-    </head>
-    <body>
-        <script src="main.js"></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <title>サンプル</title>
+</head>
+
+<body>
+    <h1>Chrome developer tools使い方</h1>
+
+    <hr />
+    <section>
+        <h2>1. 編集してみよう</h2>
+        <ol>
+            <li>名前を自分の名前に変更しよう</li>
+            <li>&lt;span&gt;要素にid属性とclass属性を追加しよう</li>
+            <li>styleを変更しよう</li>
+        </ol>
+        <div>こんにちは<span>hoge</span>さん</div>
+    </section>
+
+    <hr />
+    <section>
+        <h2>2. consoleパネルを使ってみよう</h2>
+        <ol>
+            <li>
+                <div>ボタンを押して、ログが出力されているか確認しよう</div>
+                <div><button id="btn">ログを出力</button></div>
+            </li>
+            <li>
+                <div>JavaScriptをかいて実行してみよう
+                    <div>
+                        <pre>// 以下のコードをコピペして、consoleに貼り付けて実行してください。
+// 
+const area = document.getElementById('area');
+const btn = document.createElement('button');
+btn.innerText = 'アラート';
+area.appendChild(btn);
+area.addEventListener('click', ()=> alert('アラートが押されました'));</pre>
+                        <div id="area"></div>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. デバッグ方法を理解しよう</h2>
+        <div class="debug">
+            <h3>Sourceでブレークポイントを設定して実行してみよう</h3>
+
+            <div>
+                <p>3-1. ブレークポイントが設定して実行してみよう</p>
+                <input type="text" id="input" placeholder="何か入力してくだせい" />
+                <button id="submit">送信</button>
+            </div>
+            <hr />
+
+            <div>
+                <p>3-2. ブレークポイントを編集してみよう</p>
+                <button id="execute">実行</button>
+            </div>
+            <hr />
+
+            <div>
+                <p>3-3. サブツリー「Child Node」を変更します</p>
+                <button id="edit">実行</button>
+            </div>
+            <div id="parent">
+                Parent Node
+                <div id="child">Child Node</div>
+            </div>
+            <hr />
+
+            <div>
+                <p>3-4. 属性を追加します</p>
+                <button id="add">属性を追加</button>
+            </div>
+            <div id="attr">classを追加します</div>
+            <hr />
+
+            <div>
+                <p>3-5. 要素を削除します</p>
+                <button id="delete">消します</button>
+            </div>
+            <div id="target">消えます</div>
+            <hr />
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
 </html>

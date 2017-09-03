@@ -1,1 +1,16 @@
 @charset "UTF-8";
+
+.name{
+    background-color: deepskyblue;
+    font-size: 26px;
+}
+
+.debug{
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
+.attr{
+    background-color: red;
+    color: white;
+}
